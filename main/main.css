@@ -1,0 +1,42 @@
+html{
+   scroll-behavior: smooth;
+}
+* {
+   margin: 0;
+   padding: 0; 
+   background-color: white;
+}
+
+body { 
+   margin: 0 auto;
+   width : 410px;
+ }
+a {
+ }
+#banner {
+   text-align: center;
+ }
+
+#content{
+   padding-top: 10px;
+   font-family: 'Jua', sans-serif;
+   font-size: 20px;
+   text-align: center;
+   background-color: #FFFFFF;
+  
+}
+footer { 
+   font-size: 20px;
+   text-align: center; 
+   font-family: 'Jua', sans-serif;
+   background-color: white;
+   padding: 5px;
+}
+
+h1 {	
+    font-family: 'Jua', sans-serif;
+    font-size: 30px;
+    text-align: center;	
+    margin: 0 auto;
+    padding: 10px 0px 20px 0px;
+}
