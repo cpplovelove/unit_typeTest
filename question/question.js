@@ -77,6 +77,7 @@ $(function () {
         return;
       }
       $("#question").text(question[count]);
+      $("#question_index").text("Q" + (count + 1));
       $("#yes").text(pos[count]);
       $("#no").text(neg[count]);
     });
@@ -100,6 +101,7 @@ $(function () {
         return;
       }
       $("#question").text(question[count]);
+      $("#question_index").text("Q" + (count + 1));
       $("#yes").text(pos[count]);
       $("#no").text(neg[count]);
     });
@@ -135,27 +137,29 @@ $(function () {
   var forFinal = 0;
   //yes,no에서 count가 6이면 호출할 함수
   function final() {
-    document.getElementById("img").src =
-      "https://yt3.ggpht.com/ytc/AKedOLRAL0GpI6urQS7hdcwVqGBWmgT_7Svl34RIymcdvg=s900-c-k-c0x00ffffff-no-rj";
-    document.getElementById("all").style.display = "none";
-    document.getElementById("gif").style.display = "block";
-    document.getElementById("banner").style.backgroundColor = "#ffffff";
-    document.getElementById("a").style.backgroundColor = "#ffffff";
-    //$("header").backgroundColor="white";
+    // document.getElementById("img").src =
+    //   "https://yt3.ggpht.com/ytc/AKedOLRAL0GpI6urQS7hdcwVqGBWmgT_7Svl34RIymcdvg=s900-c-k-c0x00ffffff-no-rj";
+    // document.getElementById("all").style.display = "none";
+    // document.getElementById("gif").style.display = "block";
+    // document.getElementById("banner").style.backgroundColor = "#ffffff";
+    // document.getElementById("a").style.backgroundColor = "#ffffff";
+    // //$("header").backgroundColor="white";
 
-    setTimeout(function () {
-      document.getElementById("a").style.backgroundColor = "#ffffff";
-      document.getElementById("all").style.display = "block";
-      document.getElementById("gif").style.display = "none";
-      document.getElementById("img").src = "banner2.png";
-      document.getElementById("banner").style.backgroundColor = "#90268f";
-    }, 3000); // 5초후 go() 함수를 호출한다
+    // setTimeout(function () {
+    //   document.getElementById("a").style.backgroundColor = "#ffffff";
+    //   document.getElementById("all").style.display = "block";
+    //   document.getElementById("gif").style.display = "none";
+    //   document.getElementById("img").src = "banner2.png";
+    //   document.getElementById("banner").style.backgroundColor = "#90268f";
+    // }, 3000); // 5초후 go() 함수를 호출한다
 
     document.getElementById("img").style.width = "300px";
     document.getElementById("text1").style.display = "block";
     document.getElementById("text2").style.display = "block";
-    document.getElementById("text3").style.display = "block";
-    document.getElementById("text4").style.display = "block";
+    document.getElementById("unit_info").style.display = "block";
+    document.getElementById("unit_activity").style.display = "block";
+    document.getElementById("gotoCJ").style.display = "block";
+    document.getElementById("logo").style.display = "block";
 
     //결과값 계산
     var energy = introverted > extroverted ? "introverted" : "extroverted",
@@ -181,16 +185,6 @@ $(function () {
     }
     $("#count").value = index;
 
-    var max = 0,
-      index = 0;
-    for (var i = 0; i < 9; i++) {
-      if (array[i] > max) {
-        max = array[i];
-        index = i;
-      }
-    }
-    $("#count").value = index;
-
     $("#question").height = "500px";
     $("#content").paddingTop = "10px";
     $("#content").fontFamily = "Jua";
@@ -201,7 +195,6 @@ $(function () {
     $("#btn2").fontSize = "20px";
     $("#btn1").width = "40px";
     $("#btn2").width = "40px";
-    //$("").width="40px";
     yes.fontSize = "20px";
     no.fontSize = "20px";
     yes.text("테스트 다시하기");
@@ -209,16 +202,14 @@ $(function () {
 
     $("#btn1").css("display", "none");
     $("#btn2").css("display", "none");
+    $("#question_index").css("display", "none");
     $("#btn3").css("display", "block");
     $("#btn4").css("display", "block");
     $("h1").css("display", "block");
     $("#answer").css("padding-bottom", "0px");
     $("#text1").text("나에게 어울리는 유형은?");
     $("#text2").text(resultFirst[index]);
-    $("#text3").text("----------------------");
-    $("#text4").text("당신에게 맞는 엔유의 공약!");
     $("#question").text(result[index] + "\n\n\n");
     $("#content").text(result[index]);
-    //	location.replace('eny	ouresult.html');
   }
 });
