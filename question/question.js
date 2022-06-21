@@ -1,16 +1,20 @@
 $(function () {
-  let introvert = 0,
-    planned = 0,
-    dedicated = 0;
-
-  var post = $("#post"),
+  var array = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+  var question = $("#question"), //질문, 긍정, 부정
     yes = $("#yes"),
     no = $("#no");
-
-  var count = 0,
+  var count = 0, //현재 페이지의 index
     flag = 0;
   var i = 0,
     ff = 0;
+
+  var introverted = 0,
+    extroverted = 0, //내향, j, 팀 여부
+    jCount = 0,
+    pCount = 0,
+    teamCount = 0,
+    personalCount = 0;
+
   {
     var question = [
       "1. 입학 후 첫 수업날 강의실에 일찍 도착했다! 그런데... 모르는 사람과 단 둘이 옆자리에 앉아 서로 눈치만 보고 있는 상황이다. 이때 나는?",
@@ -24,90 +28,197 @@ $(function () {
       "9. 한학기가 드디어 끝났다! 마지막 수업이 끝나고 우연히 엘레베이터에서 교수님과 마주쳤다. 이때 다음 학기 수업에는 팀플이 나을지 개인과제가 나을지 질문하시는데... 이때 나는?",
     ];
     var pos = [
-      "뭐니뭐니해도 집이 최고! 방 안에서 뒹굴뒹굴거린다",
-      "관심 있는 분야, 혹은 취미생활을 즐기기 위한 동아리 활동!",
-      "만나보지도 못한 동기와 선배들, 경험하지 못한 새내기 대학생활",
-      "쨍쨍한 햇빛 받으며 수업 들으러 가며 보는 일감호",
-      "한학기 쓰고 버릴건데 너무 비싸!! 아까운 내 돈...",
-      "가족들과 혹은 혼자 집에서 편하게 시청한다.",
+      //외향,j,봉사
+      "자리 사람에게 먼저 이름을 물으며 다가간다",
+      "궁금한건 못 참아! 수업 끝나고 바로 교수님께 가 질문한다. ",
+      "안그래도 졸렸는데 잘됐다! 당장 친구 따라 가야지~ ",
+      "내가 이번주 할일이 뭐가 있었지? 남은 시간에 쉬엄쉬엄 좀 해둘까?",
+      "내 진로에 도움이 되는 동아리 설명을 들으러 가볼까?",
+      "그래도 빨리 정할수록 좋으니까.. 선배들이나 학교 취업 상담팀의 도움을 받아볼까? ",
+      "그래도 다 같이 놀았는데... 마지막까지 남아서 같이 치우고 다 같이 가야지",
+      "캠페인? 날도 더운데 저 분들 힘들시겠다... 부탁하시는데 거절하기도 좀... 금방하니까 설문조사 참여한다",
+      "대학과제의 꽃은 팀플이죠! 학우들과 함께하는 팀플이 좋은것 같아요 ",
     ];
     var neg = [
-      "이런 날 활동적인 걸 해야지! 밖에 나가서 친구들과 논다",
-      "공대생들만을 위한 각종 이벤트, 공모전 등 공대의 다양한 행사!",
-      "영화관, 콘서트 등 마음껏 즐기지 못한 문화생활",
-      "퇴근 후 무거운 몸을 이끌고 가며 보는 운치 있는 일감호",
-      "책 사러 갈 시간도 없고 사러 나가기 너무 귀찮아!",
-      "친구들과 다 같이 모여서 떠들며 신나게 응원한다.",
+      "옆자리 살마이 먼저 말을 걸어주기를 기다린다",
+      "직접적으로 여쭤보긴 좀 그러니까... 메일로 질문해야겠다. or 친구한테 물어보거나 스스로 책 찾아보며 답을 찾아봐야지",
+      "아무래도... 다른 사람 집은 좀 불편해... 그냥 혼자 좀 더 공부하다가 첫차 타고 집 가서 쉴래",
+      "지금 시간 되는 사람? 바로 친구랑 번개 약속 잡기",
+      "무조건 동아리는 재밌게 즐길 수 있는게 최고지 어떤 동아리가 제일 신나려나~",
+      "졸업할때쯤이면 자연스럽게 정해지지 않을까? 일단 학교나 열심히 다녀야지",
+      "안그래도 피곤한데 잘됐다... 얼른 짐 챙겨 튀자!",
+      "내 갈 길 바쁘다.. 다음에 참여할게요하고 지나간다",
+      "아무래도 개인과제가 편해서 좋은것 같아요...! ",
     ];
   }
+
+  //------------------과정--------------------------
   if (ff == 0) {
-    $("#post").text(question[count]);
+    $("#question").text(question[count]);
     $("#yes").text(pos[count]);
     $("#no").text(neg[count]);
+
     $("#yes").click(function () {
       switch (count) {
-        case 0:
-          array[1] += 2;
-          array[3] += 3.5;
+        case 0 || 1 || 2:
+          extroverted += 1;
           break;
-        case 1:
-          array[8] += 3.5;
+        case 3 || 4 || 5:
+          jCount += 1;
           break;
-        case 2:
-          array[0] += 3;
-          break;
-        case 3:
-          break;
-        case 4:
-          array[2] += 3.5;
-          break;
-        case 5:
+        case 6 || 7 || 8:
+          teamCount += 1;
           break;
       }
       count++;
-      if (count == 6) {
+      if (count == 9) {
         ff = 1;
         final();
         return;
       }
-      $("#post").text(question[count]);
+      $("#question").text(question[count]);
       $("#yes").text(pos[count]);
       $("#no").text(neg[count]);
     });
+
     $("#no").click(function () {
       switch (count) {
-        case 0:
-          array[0] += 1;
-          array[6] += 1;
+        case 0 || 1 || 2:
+          introverted += 1;
           break;
-        case 1:
-          array[6] += 1;
-          array[7] += 3.1;
+        case 3 || 4 || 5:
+          pCount += 1;
           break;
-        case 2:
-          array[1] += 1.5;
-          break;
-        case 3:
-          array[4] += 4;
-          array[5] += 3;
-          array[0] -= 1;
-          break;
-        case 4:
-          array[5] += 3;
-          break;
-        case 5:
-          array[6] += 2;
+        case 6 || 7 || 8:
+          personalCount += 1;
           break;
       }
       count++;
-      if (count == 6) {
+      if (count == 9) {
         ff = 1;
         final();
         return;
       }
-      $("#post").text(question[count]);
+      $("#question").text(question[count]);
       $("#yes").text(pos[count]);
       $("#no").text(neg[count]);
     });
+  }
+
+  //------------------결과 변수 선언-------------------------
+
+  var resultFirst = [
+    //result에 넣기
+    "학술 동아리",
+    "멘토링",
+    "마케팅",
+    "봉사활동",
+    "홍보",
+    "체육",
+    "음악",
+    "친목 동아리",
+  ];
+  var result = [
+    "학술 : 흥미있는 분야에 대해서는 누구보다 깊게 파고드는 당신에게 어울리는 대외활동은 학술동아리! 무의미하게 흘러가는 시간을 지루해하고 자기개발에 힘쓰는 걸 좋아해요. 모든 일에 계획을 세워두고 실천하는 편이라 자기통제력이 강하고 책임감도 있어서 주변인들에게 쉽게 호감을 사는 사람이에요.뭐든 열심히! 본인이 만족해야 직성이 풀리고 해낸 일에 대해 인정받고 싶은 경향이 강해요. 조별과제보다는 개인과제, 꼼수를 모르고 성실하게 목표를 향해 노력하는 타입입니다.",
+    "멘토링 : 진로에 대해 끊임없이 고민하고 이것저것 다양한 활동을 하지만 어딘가 비어있는 느낌이 들어요. 취업을 위해 무엇을 어떻게 준비해야 할지 모르겠고 현실적인 조언이 필요해요.",
+    "마케팅 : '네가 추천해주는 건 안 살 수가 없어' 재빠른 눈치와 분석력을 활용한 족집게 추천 장인! 남들이 정해놓은 틀에 갇히지 않는 자유로운 영혼인 당신에게 어울리는 대외활동은 바로 마케팅이에요. 자율적으로 새로운 도전에 뛰어들어, 통통튀는 독창적인 아이디어를 제시해요. 사람들이 원하는 것을 누구보다 빠르게 캐치하는 분석력을 갖고 있어요.",
+    "봉사 : 당신은 누군가를 도우며 뿌듯함을 느끼고 나눔을 실천할줄 아는 사람이에요.당신이 가지고 있는 능력과 열정으로 보다 따뜻한 사회를 만드는데 노력을 기울이고 싶은 사람이에요.그런 당신! 봉사활동이 잘 어울리시겠군요!청소년 멘토링, 교육봉사, 복지센터 봉사, 행사 자원봉사자 등 다양한 봉사를 실천할 수 있는 봉사활동이 정말 많은데요, 봉사활동을 통해 뜻깊은 대학생활을 보내보는건 어떨까요~?",
+    "홍보 : 관심이 집중되는 곳에 빠지지 않는 인싸! 다양한 사람들에게 자신의 매력을 발산하는 댕댕이 같은 당신에게 어울리는 대외활동은 서포터즈에요. 트랜드나 유행에 민감하여 뉴미디어를 누구보다 잘 활용하는 능력자에요. 자신만의 감성과 스타일로 이목을 끄는 콘텐츠를 제작할 수 있는 금손이네요.",
+    "체육: 당신은 누군가를 도우며 뿌듯함을 느끼고 나눔을 실천할줄 아는 사람이에요. 당신이 가지고 있는 능력과 열정으로 보다 따뜻한 사회를 만드는데 노력을 기울이고 싶은 사람이에요.그런 당신! 봉사활동이 잘 어울리시겠군요!청소년 멘토링, 교육봉사, 복지센터 봉사, 행사 자원봉사자 등 다양한 봉사를 실천할 수 있는 봉사활동이 정말 많은데요, 봉사활동을 통해 뜻깊은 대학생활을 보내보는건 어떨까요~?",
+    "음악: 규칙 틀에 묶이는 것을 싫어하는 당신에게 어울리는 대외활동은 음악! 사람이나 사물을 다양한 시각에서 바라보고 편견을 거부해서 창의적인 아이디어를 뿜뿜 표출하는 사람이에요. 문학, 음악, 미술 분야에 관심이 많아 예술가 기질이 있어요. 본인이 하고자 하는 일에 열정적으로 몰두하며 사는 타입입니다.",
+    "친목 : 당신은 정열적이고 활기가 넘쳐 반복되는 일상을 재미없어하고 사람들과의 만남을 좋아해요.당신은 재미있고 도전적인 일에 흥미를 느껴 다양한 사람들과 다양한 활동을 하는것에 두려움이 없어요.그런 당신! 친목동아리가 잘 어울리시겠군요!친목동아리는 맛집탐방, 문화생활, 스포츠, 여행 등을 함께하며 새로운 사람들과 친목을 쌓는 동아리에요.다양한 개성을 가진 사람들과 신나게 놀며 즐거운 대학생을 보내보세요~",
+  ];
+
+  //-----------------서버 없이 결과화면 렌더링 해주기 위한 함수-------------------------
+
+  var timer;
+  var forFinal = 0;
+  //yes,no에서 count가 6이면 호출할 함수
+  function final() {
+    document.getElementById("img").src = "banner2.jpg";
+    document.getElementById("all").style.display = "none";
+    document.getElementById("gif").style.display = "block";
+    document.getElementById("banner").style.backgroundColor = "#ffffff";
+    document.getElementById("a").style.backgroundColor = "#ffffff";
+    //$("header").backgroundColor="white";
+
+    setTimeout(function () {
+      document.getElementById("a").style.backgroundColor = "#ffffff";
+      document.getElementById("all").style.display = "block";
+      document.getElementById("gif").style.display = "none";
+      document.getElementById("img").src = "banner2.png";
+      document.getElementById("banner").style.backgroundColor = "#90268f";
+    }, 3000); // 5초후 go() 함수를 호출한다
+
+    document.getElementById("img").style.width = "300px";
+    document.getElementById("text1").style.display = "block";
+    document.getElementById("text2").style.display = "block";
+    document.getElementById("text3").style.display = "block";
+    document.getElementById("text4").style.display = "block";
+
+    //결과값 계산
+    var energy = introverted > extroverted ? "introverted" : "extroverted",
+      identity = jCount > pCount ? "J" : "P",
+      personal = personalCount > teamCount ? "personal" : "team";
+    //0학술 1멘토링 2마케팅 3봉사 4홍보 5체육 6음악 7친목
+    if (energy == "introverted") {
+      if (identity == "J") {
+        if (personal == "personal") index = 0; //학술
+        else index = 1; //멘토링
+      } else {
+        if (personal == "personal") index = 2; //마케팅
+        else index = 3; //봉사
+      }
+    } else {
+      if (identity == "J") {
+        if (personal == "personal") index = 4; //홍보
+        else index = 5; //체육
+      } else {
+        if (personal == "personal") index = 6; //음악
+        else index = 7; //친목
+      }
+    }
+    $("#count").value = index;
+
+    var max = 0,
+      index = 0;
+    for (var i = 0; i < 9; i++) {
+      if (array[i] > max) {
+        max = array[i];
+        index = i;
+      }
+    }
+    $("#count").value = index;
+
+    $("#question").height = "500px";
+    //	$(".question-wrapper").attr("height","500px");
+    $("#content").paddingTop = "10px";
+    $("#content").fontFamily = "Jua";
+    $("#content").fontSize = "15px";
+    $("#content").backgroundColor = "#f5e6fd";
+
+    $("#btn1").fontSize = "20px";
+    $("#btn2").fontSize = "20px";
+    $("#btn1").width = "40px";
+    $("#btn2").width = "40px";
+    //$("").width="40px";
+    yes.fontSize = "20px";
+    no.fontSize = "20px";
+    yes.text("테스트 다시하기");
+    no.text("공약 더 둘러보기 ");
+
+    $("#btn1").css("display", "none");
+    $("#btn2").css("display", "none");
+    $("#btn3").css("display", "block");
+    $("#btn4").css("display", "block");
+    $("h1").css("display", "block");
+    $("#answer").css("padding-bottom", "0px");
+    $("#text1").text("나에게 어울리는 유형은?");
+    $("#text2").text(resultFirst[index]);
+    $("#text3").text("----------------------");
+    $("#text4").text("당신에게 맞는 엔유의 공약!");
+    $("#question").text(result[index] + "\n\n\n");
+    $("#content").text(result[index]);
+    //	location.replace('eny	ouresult.html');
   }
 });

@@ -31,14 +31,14 @@ a {
 #rere{
    font-family: 'Jua', sans-serif;
    font-size: 20px;
-   background-color: #FFFFFF;
+   background-color: #ffffff;
 }
 #content{
    padding-top: 10px;
    font-family: 'Jua', sans-serif;
    font-size: 20px;
    text-align: center;
-   background-color: #FFFFFF;
+   background-color: #ffffff;
   
 }
 #question {
@@ -48,28 +48,28 @@ a {
    width: 300px;
    margin: 5px auto;
    padding: 5px 25px;
-   background-color: #FFFFFF;
+   background-color: #ffffff;
    border-radius: 15px;
-   /* border : 4px dashed black; */
 }
 .post-wrapper{
-   background-color: #FFFFFF;
+   background-color: #ffffff;
    height: 230px;
    display: table-cell;
     vertical-align: middle;
 }
 #post{
    padding:5px 15px;
-   background-color: #FFFFFF;
+   background-color: #ffffff;
 }
 #result2{   padding: 15px;
-   background-color: #FFFFFF;
+   background-color: #ffffff;
 }
 #answer {
    padding: 25px 0px;
    text-align: center;
    background-color: #FBEC77;
 }
+
 #answer button { 
    width: 360px;
    font-size: 25px; 
@@ -101,13 +101,13 @@ a {
 
 .answer button:active { 
    color:white; 
-   background-color: #0098EE; 
+   background-color: #21bdbd; 
    font-family: 'Jua', sans-serif;
 }
 
 #answer button:active { 
    color:white; 
-   background-color: #0098EE; 
+   background-color: #21bdbd; 
    font-family: 'Jua', sans-serif;
 }
 #answer #btn1, #btn2 { 
