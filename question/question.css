@@ -9,7 +9,6 @@ html{
 
 body { 
    margin: 0 auto;
-   width : 410px;
    background-color: #FBEC77;
 }
 a {
@@ -58,7 +57,7 @@ a {
     font-family: 'Jua', sans-serif;
     font-size: 15px;
     text-align: left;
-    width: 300px;
+    width: 80%;
     padding: 0px 25px;
     background-color: #ffffff;
     border-radius: 15px;
@@ -84,7 +83,7 @@ a {
 
 /* 버튼 */
 #answer button { 
-   width: 360px;
+   width: 80%;
    font-size: 15px; 
    border : none;
    border-radius: 18px;
@@ -100,7 +99,7 @@ a {
 }
 
 .answer button { 
-   width: 100px;
+   width: 80%;
    height: 50px;
    font-size: 20px; 
    border : 3px solid black;
