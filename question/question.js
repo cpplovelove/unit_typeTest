@@ -135,7 +135,8 @@ $(function () {
   var forFinal = 0;
   //yes,no에서 count가 6이면 호출할 함수
   function final() {
-    document.getElementById("img").src = "banner2.jpg";
+    document.getElementById("img").src =
+      "https://yt3.ggpht.com/ytc/AKedOLRAL0GpI6urQS7hdcwVqGBWmgT_7Svl34RIymcdvg=s900-c-k-c0x00ffffff-no-rj";
     document.getElementById("all").style.display = "none";
     document.getElementById("gif").style.display = "block";
     document.getElementById("banner").style.backgroundColor = "#ffffff";
@@ -191,7 +192,6 @@ $(function () {
     $("#count").value = index;
 
     $("#question").height = "500px";
-    //	$(".question-wrapper").attr("height","500px");
     $("#content").paddingTop = "10px";
     $("#content").fontFamily = "Jua";
     $("#content").fontSize = "15px";

@@ -41,15 +41,27 @@ a {
    background-color: #ffffff;
   
 }
-#question {
-   font-family: 'Jua', sans-serif;
-   font-size: 30px;
+/* qustion 영역 관련 */
+.question-wrapper{
+   background-color: white;
    text-align: center;
-   width: 300px;
-   margin: 5px auto;
-   padding: 5px 25px;
-   background-color: #ffffff;
+   margin: 20px 30px;
+   padding: 20px 0;
    border-radius: 15px;
+}
+
+#question_index{
+   margin: 10px;
+}
+
+#question {
+    font-family: 'Jua', sans-serif;
+    font-size: 18px;
+    text-align: left;
+    width: 300px;
+    padding: 0px 25px;
+    background-color: #ffffff;
+    border-radius: 15px;
 }
 .post-wrapper{
    background-color: #ffffff;
@@ -70,16 +82,18 @@ a {
    background-color: #FBEC77;
 }
 
+/* 버튼 */
 #answer button { 
    width: 360px;
-   font-size: 25px; 
-   border : 3px solid black;
-   border-radius: 1em;
+   font-size: 15px; 
+   border : none;
+   border-radius: 18px;
    background-color: white; 
    color: black; 
    margin-bottom: 10px; 
    padding: 15px; 
    font-family: 'Jua', sans-serif;
+   box-shadow: 2px 5px 5px rgb(0 0 0 / 10%)
 }
 #count{
 	display: none;
