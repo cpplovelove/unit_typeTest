@@ -6,29 +6,26 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script&family=Do+Hyeon&family=Jua&family=Manrope:wght@200&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Permanent+Marker&display=swap" rel="stylesheet">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.js"></script>
    <script type="text/javascript" src="question.js"></script>
    </script>
 </head>
 
-<body width="device-width">
+<body>
 	<header>
-		<link rel="stylesheet" href="question.css">	
+		<link rel="stylesheet" href="question.css">
 		<div id="banner">
-			<a id="a" onClick="window.location.reload()" style="cursor: pointer;">
-				<img id="img" src="" alt="배너" width="380px" height="100px">
-			</a>
-		</div>	
+		</div>
 	</header>
 	<div id="gif"><img id="gifimg" src="loding.gif"></div>
 	<div id="all">
 	<div id="text1"></div>
 	<div id="text2"></div>
-	
+
 	<div class="question-wrapper">
 		<h2 id="question_index">Q1</h2>
-		<img src="../testImg.png" width="200px">
+		<img id="question_img" src="../img/question/1.png"  >
 		<div id="question">
 				<div class="post-wrapper">
 					<div class="post">
@@ -39,20 +36,28 @@
 			</div>
 		</div>
 	</div>
-   
+
 
 	<div id="unit_info">
-		<div class="title">유닛 소개</div>
+		<div class="title">창캐미가 분석한 당신은?</div>
 		<div class="content">
-			흥미있는 분야에 대해서는 누구보다 깊게 파고드는 당신에게 어울리는 대외활동은 학술동아리! 무의미하게 흘러가는 시간을 지루해하고 자기개발에 힘쓰는 걸 좋아해요. 모든 일에 계획을 세워두고 실천하는 편이라 자기통제력이 강하고 책임감도 있어서 주변인들에게 
+			<div id="relevant">어울리는 활동</div>
 		</div>
 	</div>
 
 	<div id="unit_activity">
-		<div class="title">유닛에서 어울리는 활동 추천</div>
+		<div class="title1">추천하는 대외활동</div>
 		<div class="content">
-			흥미있는 분야에 대해서는 누구보다 깊게 파고드는 당신에게 어울리는 대외활동은 학술동아리! 무의미하게 흘러가는 시간을 지루해하고 자기개발에 힘쓰는 걸 좋아해요. 모든 일에 계획을 세워두고 실천하는 편이라 자기통제력이 강하고 책임감도 있어서 주변인들에게 
+		 </div>
+		<div id="about_unit"> <br> 대학생 봉사단 CJ UNIT을 아시나요? </div>
+		<div class="content">
+			CJ UNIT은 IT 교육 격차 해소와 ICT창의인재 양성을 위해<br>
+			중,고등학교 학생들에게 SW 코딩 교육을 제공하는 현존하는 최고의 대학생 봉사단이에요!<br>
+			코딩 실력이 뛰어나지 않아도 활동할 수 있으니 한 번 지원해보실래요~?
 		</div>
+		<button type="button" id="gotoCJ"> <a href="https://linktr.ee/cjunit">
+            CJ UNIT 더 알아보러 가기
+        </a></button>
 	</div>
 
 	<div id="answer">
@@ -62,15 +67,16 @@
 		<div id="btn2">
 			<button id="no"></button>
 		</div>
+
+	<div id="last_answer">
 		<div id="btn3">
 			<button id="replay" onclick="location.href=''">테스트 다시하기</button>
 		</div>
 		<div id="btn4">
 			<button id="other" onclick="location.href=''">테스트 공유하기 </button>
-		<div id="gotoCJ"><a href="https://linktr.ee/cjunit">CJ SW창의캠프 더 알아보기</a></div>
-		<div id="logo"><img src="../logo.png" width="50px"/>
+		</div>
 		</div>
 	</div>
-	</div>
+
 </body>
 </html>

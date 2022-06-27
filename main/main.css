@@ -9,11 +9,13 @@ html{
 
 body { 
    margin: 0 auto;
- }
-a {
+   width : 410px; }
+a { text-decoration-line: none; color: black;
+    background-color: #ec977d;
  }
 #banner {
    text-align: center;
+   margin-top: 100px;
  }
 
 #content{
@@ -34,8 +36,19 @@ footer {
 
 h1 {	
     font-family: 'Jua', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;	
     margin: 0 auto;
     padding: 10px 0px 20px 0px;
+}  
+
+#btn {
+    font-family: 'Jua', sans-serif;
+    font-size: 30px;
+    padding: 0.75rem 1rem;
+    border: 3.5px solid #000000;
+    border-radius: 12px;
+    background: #ec977d;
+    width: 50%;
+    margin: auto;
 }

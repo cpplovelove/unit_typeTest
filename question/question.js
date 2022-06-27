@@ -76,6 +76,8 @@ $(function () {
         final();
         return;
       }
+      document.getElementById("question_img").src =
+        "../img/question/" + (count + 1) + ".png";
       $("#question").text(question[count]);
       $("#question_index").text("Q" + (count + 1));
       $("#yes").text(pos[count]);
@@ -100,6 +102,8 @@ $(function () {
         final();
         return;
       }
+      document.getElementById("question_img").src =
+        "../img/question/" + (count + 1) + ".png";
       $("#question").text(question[count]);
       $("#question_index").text("Q" + (count + 1));
       $("#yes").text(pos[count]);
@@ -121,14 +125,14 @@ $(function () {
     "친목 동아리",
   ];
   var result = [
-    "학술 : 흥미있는 분야에 대해서는 누구보다 깊게 파고드는 당신에게 어울리는 대외활동은 학술동아리! 무의미하게 흘러가는 시간을 지루해하고 자기개발에 힘쓰는 걸 좋아해요. 모든 일에 계획을 세워두고 실천하는 편이라 자기통제력이 강하고 책임감도 있어서 주변인들에게 쉽게 호감을 사는 사람이에요.뭐든 열심히! 본인이 만족해야 직성이 풀리고 해낸 일에 대해 인정받고 싶은 경향이 강해요. 조별과제보다는 개인과제, 꼼수를 모르고 성실하게 목표를 향해 노력하는 타입입니다.",
-    "멘토링 : 진로에 대해 끊임없이 고민하고 이것저것 다양한 활동을 하지만 어딘가 비어있는 느낌이 들어요. 취업을 위해 무엇을 어떻게 준비해야 할지 모르겠고 현실적인 조언이 필요해요.",
-    "마케팅 : '네가 추천해주는 건 안 살 수가 없어' 재빠른 눈치와 분석력을 활용한 족집게 추천 장인! 남들이 정해놓은 틀에 갇히지 않는 자유로운 영혼인 당신에게 어울리는 대외활동은 바로 마케팅이에요. 자율적으로 새로운 도전에 뛰어들어, 통통튀는 독창적인 아이디어를 제시해요. 사람들이 원하는 것을 누구보다 빠르게 캐치하는 분석력을 갖고 있어요.",
-    "봉사 : 당신은 누군가를 도우며 뿌듯함을 느끼고 나눔을 실천할줄 아는 사람이에요.당신이 가지고 있는 능력과 열정으로 보다 따뜻한 사회를 만드는데 노력을 기울이고 싶은 사람이에요.그런 당신! 봉사활동이 잘 어울리시겠군요!청소년 멘토링, 교육봉사, 복지센터 봉사, 행사 자원봉사자 등 다양한 봉사를 실천할 수 있는 봉사활동이 정말 많은데요, 봉사활동을 통해 뜻깊은 대학생활을 보내보는건 어떨까요~?",
-    "홍보 : 관심이 집중되는 곳에 빠지지 않는 인싸! 다양한 사람들에게 자신의 매력을 발산하는 댕댕이 같은 당신에게 어울리는 대외활동은 서포터즈에요. 트랜드나 유행에 민감하여 뉴미디어를 누구보다 잘 활용하는 능력자에요. 자신만의 감성과 스타일로 이목을 끄는 콘텐츠를 제작할 수 있는 금손이네요.",
-    "체육: 당신은 누군가를 도우며 뿌듯함을 느끼고 나눔을 실천할줄 아는 사람이에요. 당신이 가지고 있는 능력과 열정으로 보다 따뜻한 사회를 만드는데 노력을 기울이고 싶은 사람이에요.그런 당신! 봉사활동이 잘 어울리시겠군요!청소년 멘토링, 교육봉사, 복지센터 봉사, 행사 자원봉사자 등 다양한 봉사를 실천할 수 있는 봉사활동이 정말 많은데요, 봉사활동을 통해 뜻깊은 대학생활을 보내보는건 어떨까요~?",
-    "음악: 규칙 틀에 묶이는 것을 싫어하는 당신에게 어울리는 대외활동은 음악! 사람이나 사물을 다양한 시각에서 바라보고 편견을 거부해서 창의적인 아이디어를 뿜뿜 표출하는 사람이에요. 문학, 음악, 미술 분야에 관심이 많아 예술가 기질이 있어요. 본인이 하고자 하는 일에 열정적으로 몰두하며 사는 타입입니다.",
-    "친목 : 당신은 정열적이고 활기가 넘쳐 반복되는 일상을 재미없어하고 사람들과의 만남을 좋아해요.당신은 재미있고 도전적인 일에 흥미를 느껴 다양한 사람들과 다양한 활동을 하는것에 두려움이 없어요.그런 당신! 친목동아리가 잘 어울리시겠군요!친목동아리는 맛집탐방, 문화생활, 스포츠, 여행 등을 함께하며 새로운 사람들과 친목을 쌓는 동아리에요.다양한 개성을 가진 사람들과 신나게 놀며 즐거운 대학생을 보내보세요~",
+    "흥미있는 분야에 대해서는 누구보다 깊게 파고드는 당신에게 어울리는 대외활동은 학술동아리! 무의미하게 흘러가는 시간을 지루해하고 자기개발에 힘쓰는 걸 좋아해요. 모든 일에 계획을 세워두고 실천하는 편이라 자기통제력이 강하고 책임감도 있어서 주변인들에게 쉽게 호감을 사는 사람이에요.뭐든 열심히! 본인이 만족해야 직성이 풀리고 해낸 일에 대해 인정받고 싶은 경향이 강해요. 조별과제보다는 개인과제, 꼼수를 모르고 성실하게 목표를 향해 노력하는 타입입니다.",
+    "진로에 대해 끊임없이 고민하고 이것저것 다양한 활동을 하지만 어딘가 비어있는 느낌이 들어요. 취업을 위해 무엇을 어떻게 준비해야 할지 모르겠고 현실적인 조언이 필요해요.",
+    "'네가 추천해주는 건 안 살 수가 없어' 재빠른 눈치와 분석력을 활용한 족집게 추천 장인! 남들이 정해놓은 틀에 갇히지 않는 자유로운 영혼인 당신에게 어울리는 대외활동은 바로 마케팅이에요. 자율적으로 새로운 도전에 뛰어들어, 통통튀는 독창적인 아이디어를 제시해요. 사람들이 원하는 것을 누구보다 빠르게 캐치하는 분석력을 갖고 있어요.",
+    "당신은 누군가를 도우며 뿌듯함을 느끼고 나눔을 실천할줄 아는 사람이에요.당신이 가지고 있는 능력과 열정으로 보다 따뜻한 사회를 만드는데 노력을 기울이고 싶은 사람이에요.그런 당신! 봉사활동이 잘 어울리시겠군요!청소년 멘토링, 교육봉사, 복지센터 봉사, 행사 자원봉사자 등 다양한 봉사를 실천할 수 있는 봉사활동이 정말 많은데요, 봉사활동을 통해 뜻깊은 대학생활을 보내보는건 어떨까요~?",
+    "관심이 집중되는 곳에 빠지지 않는 인싸! 다양한 사람들에게 자신의 매력을 발산하는 댕댕이 같은 당신에게 어울리는 대외활동은 서포터즈에요. 트랜드나 유행에 민감하여 뉴미디어를 누구보다 잘 활용하는 능력자에요. 자신만의 감성과 스타일로 이목을 끄는 콘텐츠를 제작할 수 있는 금손이네요.",
+    "당신은 누군가를 도우며 뿌듯함을 느끼고 나눔을 실천할줄 아는 사람이에요. 당신이 가지고 있는 능력과 열정으로 보다 따뜻한 사회를 만드는데 노력을 기울이고 싶은 사람이에요.그런 당신! 봉사활동이 잘 어울리시겠군요!청소년 멘토링, 교육봉사, 복지센터 봉사, 행사 자원봉사자 등 다양한 봉사를 실천할 수 있는 봉사활동이 정말 많은데요, 봉사활동을 통해 뜻깊은 대학생활을 보내보는건 어떨까요~?",
+    "규칙 틀에 묶이는 것을 싫어하는 당신에게 어울리는 대외활동은 음악! 사람이나 사물을 다양한 시각에서 바라보고 편견을 거부해서 창의적인 아이디어를 뿜뿜 표출하는 사람이에요. 문학, 음악, 미술 분야에 관심이 많아 예술가 기질이 있어요. 본인이 하고자 하는 일에 열정적으로 몰두하며 사는 타입입니다.",
+    "당신은 정열적이고 활기가 넘쳐 반복되는 일상을 재미없어하고 사람들과의 만남을 좋아해요.당신은 재미있고 도전적인 일에 흥미를 느껴 다양한 사람들과 다양한 활동을 하는것에 두려움이 없어요.그런 당신! 친목동아리가 잘 어울리시겠군요!친목동아리는 맛집탐방, 문화생활, 스포츠, 여행 등을 함께하며 새로운 사람들과 친목을 쌓는 동아리에요.다양한 개성을 가진 사람들과 신나게 놀며 즐거운 대학생을 보내보세요~",
   ];
 
   //-----------------서버 없이 결과화면 렌더링 해주기 위한 함수-------------------------
@@ -153,37 +157,66 @@ $(function () {
     //   document.getElementById("banner").style.backgroundColor = "#90268f";
     // }, 3000); // 5초후 go() 함수를 호출한다
 
-    document.getElementById("img").style.width = "300px";
+    // document.getElementById("img").style.width = "300px";
     document.getElementById("text1").style.display = "block";
     document.getElementById("text2").style.display = "block";
     document.getElementById("unit_info").style.display = "block";
     document.getElementById("unit_activity").style.display = "block";
     document.getElementById("gotoCJ").style.display = "block";
-    document.getElementById("logo").style.display = "block";
+    // document.getElementById("logo").style.display = "block";
 
     //결과값 계산
+    var resultString = "";
     var energy = introverted > extroverted ? "introverted" : "extroverted",
       identity = jCount > pCount ? "J" : "P",
       personal = personalCount > teamCount ? "personal" : "team";
     //0학술 1멘토링 2마케팅 3봉사 4홍보 5체육 6음악 7친목
     if (energy == "introverted") {
       if (identity == "J") {
-        if (personal == "personal") index = 0; //학술
-        else index = 1; //멘토링
+        if (personal == "personal") {
+          //학술
+          index = 0;
+          resultString = "study";
+        } else {
+          //멘토링
+          index = 1;
+          resultString = "mentoring";
+        }
       } else {
-        if (personal == "personal") index = 2; //마케팅
-        else index = 3; //봉사
+        if (personal == "personal") {
+          //마케팅
+          index = 2;
+          resultString = "marketing";
+        } else {
+          //봉사
+          index = 3;
+          resultString = "volunteer";
+        }
       }
     } else {
       if (identity == "J") {
-        if (personal == "personal") index = 4; //홍보
-        else index = 5; //체육
+        if (personal == "personal") {
+          //봉사
+          index = 4;
+          resultString = "hongbo";
+        } else {
+          //체육
+          index = 5;
+          resultString = "gym";
+        }
       } else {
-        if (personal == "personal") index = 6; //음악
-        else index = 7; //친목
+        if (personal == "personal") {
+          //음악
+          index = 6;
+          resultString = "music";
+        } else {
+          //친목
+          index = 7;
+          resultString = "chinmok";
+        }
       }
     }
-    $("#count").value = index;
+    // $("#count").value = index;
 
     $("#question").height = "500px";
     $("#content").paddingTop = "10px";
@@ -199,6 +232,8 @@ $(function () {
     no.fontSize = "20px";
     yes.text("테스트 다시하기");
     no.text("공약 더 둘러보기 ");
+    document.getElementById("question_img").src =
+      "../img/result/" + resultString + ".png";
 
     $("#btn1").css("display", "none");
     $("#btn2").css("display", "none");

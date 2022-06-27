@@ -3,16 +3,36 @@ html{
 }
 * {
    margin: 0;
-   padding: 0; 
-   background-color: white;
+   padding: 0;
 }
 
-body { 
-   margin: 0 auto;
+@font-face {
+font-family: 'TTTogether';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+    font-family: 'SCoreDream';
+    font-weight: 400;
+    font-style: normal;
+    src
+    : url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff2) format('woff2'),
+         url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff) format('woff');
+    font-display: swap;
+}
+
+
+body {
    background-color: #FBEC77;
+   width: 410px;
+   margin: 0 auto;
 }
 a {
-   background-color: #FBEC77;
+   text-decoration-line: none;
+    color: black;
+    background-color: #ECB58D;
 }
 #gif{
 	height: 500px;
@@ -23,6 +43,7 @@ a {
 	background-color: white;
 }
 #banner {
+   height: 20px;
    text-align: center;
    background-color: #FBEC77;
 }
@@ -34,7 +55,6 @@ a {
 }
 #content{
    padding-top: 10px;
-   font-family: 'Jua', sans-serif;
    font-size: 20px;
    text-align: center;
    background-color: #ffffff;
@@ -44,7 +64,7 @@ a {
 .question-wrapper{
    background-color: white;
    text-align: center;
-   margin: 20px 30px;
+   margin: 0 20px 10px 20px;
    padding: 20px 0;
    border-radius: 15px;
 }
@@ -84,16 +104,31 @@ a {
 /* 버튼 */
 #answer button { 
    width: 80%;
-   font-size: 15px; 
+   font-size: 15px;
    border : none;
-   border-radius: 18px;
-   background-color: white; 
+   border-radius: 5px;
+   background-color: white;
    color: black; 
    margin-bottom: 10px; 
    padding: 15px; 
    font-family: 'Jua', sans-serif;
-   box-shadow: 2px 5px 5px rgb(0 0 0 / 10%)
+   box-shadow: 2px 5px 5px rgb(0 0 0/10%)
 }
+
+#last_answer button {
+   width: 80%;
+   font-size: 15px;
+   border : none;
+   border-radius: 5px;
+   background-color: white;
+   color: black;
+   margin-bottom: 10px;
+   padding: 15px;
+   font-family: 'TTTogether', sans-serif;
+   box-shadow: 2px 5px 5px rgb(0 0 0/10%)
+}
+
+
 #count{
 	display: none;
 }
@@ -104,18 +139,17 @@ a {
    font-size: 20px; 
    border : 3px solid black;
    border-radius: 1em;
-   background-color: white; 
+   background-color: white;
    color: black; 
    margin-bottom: 10px; 
    padding: 15px; 
    display: inline;
-   font-family: 'Jua', sans-serif;
+
 }
 
 .answer button:active { 
    color:white; 
-   background-color: #21bdbd; 
-   font-family: 'Jua', sans-serif;
+   background-color: #21bdbd;
 }
 
 #answer button:active { 
@@ -130,8 +164,10 @@ a {
    background-color: #FBEC77;
 }
 #answer #btn3, #btn4 {
-   display: none; 
+   display: none;
    background-color: #FBEC77;
+    width: 60%;
+    margin: auto;
 }
 footer { 
    font-size: 20px;
@@ -160,7 +196,7 @@ display: none;
    background-color: #FBEC77;
    color: #21bdbd; 
    text-align: center;
-   margin: 5px auto 0 auto;
+   margin: 5px auto 20px auto;
    top:10px;
    font-weight:bold;
 }
@@ -178,6 +214,7 @@ display: none;
 #gifimg{width: 200px;
 padding-top: 30px;
 padding-bottom: 30px;}
+
 #gif{display: none;
    padding: 20px;
    text-align: center;
@@ -208,40 +245,65 @@ h1 {
 }
 
 #gotoCJ{
+   font-family: 'Jua', sans-serif;
    display: none;
-   background-color: #FBEC77;
-   width: 100%;
+   background-color: #ECB58D;
+   width: 80%;
    text-decoration-line: none;
    font-weight: bold;
    font-size: 20px;
-   margin: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px
 } 
 #logo{
-   background-color: #FBEC77;
-   display: none;
+    margin-top: 25px;
+    background-color: #FBEC77;
+    display: none;
 }
 #unit_info, #unit_activity{
    display: none;
    background-color: white;
     text-align: center;
     margin: 20px 30px;
-    padding: 20px 0;
-    border-radius: 15px;
+    border: 3.5px solid #000000;
+}
+
+#about_unit{
+    font-family: 'SCoreDream', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline;
+    background-color: #FEFFCB;
 }
 
 .title{
-    font-family: 'Jua', sans-serif;
+    font-family: 'TTTogether',sans-serif;
+    font-weight: lighter;
     font-size: 20px;
-    font-weight: bold;
     padding: 10px;
-    background-color: #ffffff;
+    background-color: #89B5D5;
 }
 
+.title1{
+    font-family: 'TTTogether', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    padding: 10px;
+    background-color: #FAE27C;
+}
 .content{
-    font-family: 'Jua', sans-serif;
+    font-family: 'SCoreDream', serif;
     font-size: 15px;
-    text-align: left;
-    padding: 5px 15px;
+    text-align: center;
+    padding: 10px 20px;
     background-color: #ffffff;
     border-radius: 15px;
+}
+
+#question_img{
+   width: 300px;
+   margin: 15px 0px;
+   border-radius: 5px;
 }
