@@ -115,6 +115,9 @@ a {
    box-shadow: 2px 5px 5px rgb(0 0 0/10%)
 }
 
+#last_answer{
+   margin-bottom: 10px;
+}
 #last_answer button {
    width: 80%;
    font-size: 15px;
@@ -297,7 +300,7 @@ h1 {
     font-family: 'SCoreDream', serif;
     font-size: 15px;
     text-align: center;
-    padding: 10px 20px;
+    padding: 5px 15px;
     background-color: #ffffff;
     border-radius: 15px;
 }
@@ -306,4 +309,7 @@ h1 {
    width: 300px;
    margin: 15px 0px;
    border-radius: 5px;
+}
+#relevant{
+   padding: 10px 0;
 }
