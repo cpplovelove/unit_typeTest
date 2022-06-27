@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>   
-   <title>엔유 공약 유형 검사</title>
+   <title>유닛 유형테스트</title>
    <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script&family=Do+Hyeon&family=Jua&family=Manrope:wght@200&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
@@ -10,8 +10,20 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.js"></script>
    <script type="text/javascript" src="question.js"></script>
    </script>
+   <script>
+		function link(){
+			var url = 'https://cpplovelove.github.io/unit_typeTest/main/main.html';
+			var textarea = document.createElement("textarea");
+			document.body.appendChild(textarea);
+			url = window.document.location.href;
+			textarea.value = url;
+			textarea.select();
+			document.execCommand("copy");
+			document.body.removeChild(textarea);
+			alert("URL이 복사되었습니다.")
+		}
+	</script>
 </head>
-
 <body>
 	<header>
 		<link rel="stylesheet" href="question.css">
@@ -71,7 +83,7 @@
 			<button id="replay" onclick="location.href=''">테스트 다시하기</button>
 		</div>
 		<div id="btn4">
-			<button id="other" onclick="link">테스트 공유하기 </button>
+			<button id="other" onclick="link()">테스트 공유하기 </button>
 		</div>
 		</div>
 	</div>
