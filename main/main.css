@@ -49,6 +49,10 @@ h1 {
     border: 3.5px solid #000000;
     border-radius: 12px;
     background: #ec977d;
-    width: 80%;
+    width: 350px;
     margin: auto;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
