@@ -14,11 +14,11 @@ font-style: normal;
 }
 
 @font-face {
-    font-family: 'SCoreDream';
+    font-family: 'SCore';
     font-weight: 400;
     font-style: normal;
     src
-    : url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff2) format('woff2'),
+    : url(https://cdn.jsdelivr.net/gh/webfontworld/SCore/SCoreDream4.woff2) format('woff2'),
          url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff) format('woff');
     font-display: swap;
 }
@@ -49,7 +49,7 @@ a {
 }
 
 #rere{
-   font-family: 'Jua', sans-serif;
+   font-family: 'SCoreDream', sans-serif;
    font-size: 20px;
    background-color: #ffffff;
 }
@@ -163,7 +163,7 @@ a {
 #answer button:active { 
    color:white; 
    background-color: #21bdbd; 
-   font-family: 'Jua', sans-serif;
+   font-family: 'SCoreDream', sans-serif;
 }
 #answer #btn1, #btn2 { 
    background-color: #FBEC77;
@@ -180,7 +180,7 @@ a {
 footer { 
    font-size: 20px;
    text-align: center; 
-   font-family: 'Jua', sans-serif;
+   font-family: 'SCoreDream', sans-serif;
    background-color: white;
    padding: 5px;
 }
@@ -214,7 +214,7 @@ display: none;
    height: 20px;
    bottom: 5px;
    font-size: 30px;
-   font-family: 'Jua', sans-serif;
+   font-family: 'SCoreDream', sans-serif;
    background-color: #FBEC77;
    color: white;
    text-align: center;
@@ -236,14 +236,14 @@ padding-bottom: 30px;}
    height: 70px;
    bottom: 5px;
    font-size: 30px;
-   font-family: 'Jua', sans-serif;
+   font-family: 'SCoreDream', sans-serif;
    background-color: #FBEC77;
    color: white;
    text-align: center;
    margin: 5px auto 0 auto;
 }
 h1 {	
-    font-family: 'Jua', sans-serif;
+    font-family: 'SCoreDream', sans-serif;
     font-size: 16px;
     background-color: #FBEC77;
     text-align: center;	
@@ -254,7 +254,7 @@ h1 {
 }
 
 #gotoCJ{
-   font-family: 'Jua', sans-serif;
+   font-family: 'SCoreDream', sans-serif;
    display: none;
    background-color: #ECB58D;
    width: 80%;
